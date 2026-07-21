@@ -1,1 +1,19 @@
-/* Studio by Gih Mariano */
+/* =================================== */
+/* Studio by Gih Mariano               */
+/* =================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#FAF7F2;
+
+    color:#2E2E2E;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
