@@ -1,27 +1,14 @@
-*{
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-}
-
-a{
-
-}
-
-img{
-
-}
-
-.button{
-
-}
-
-.container{ 
-  width:min(1200px,90%);
-
-    margin:auto;
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
 }
 
 
