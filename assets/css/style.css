@@ -6,9 +6,9 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-   =============== fim da margem de titulo =========================
+
 }
-================== body ================
+
 body{
     background:var(--white);
     color:var(--dark);
