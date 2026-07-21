@@ -1,1 +1,23 @@
+:root{
 
+    /* Cores */
+
+    --white:#FCFBF9;
+
+    --off-white:#F6F2EE;
+
+    --terracotta:#B76E5D;
+
+    --gold:#C9A227;
+
+    --dark:#2C2C2C;
+
+    --gray:#6F6F6F;
+
+    /* Espaçamentos */
+
+    --radius:18px;
+
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
