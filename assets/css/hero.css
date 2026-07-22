@@ -1,136 +1,353 @@
-/* Container da seção principal */
-/* ==========================================
+/* =======================================================
    HERO
-========================================== */
+======================================================= */
 
 .hero{
+
+    width:min(1200px,90%);
+    margin:0 auto;
 
     min-height:calc(100vh - 80px);
 
     display:grid;
-
     grid-template-columns:1fr 1fr;
 
     align-items:center;
 
     gap:80px;
 
-    width:min(1200px,90%);
+    position:relative;
 
-    margin:auto;
+}
+
+/* =======================================================
+   TEXTO
+======================================================= */
+
+.hero-text-container{
+
+    max-width:560px;
+
+}
+
+.hero-subtitle{
+
+    font-family:var(--font-body);
+
+    font-size:1rem;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:var(--color-subtitle);
+
+    margin-bottom:18px;
+
+}
+
+.hero-title{
+
+    font-family:var(--font-title);
+
+    font-size:5rem;
+
+    line-height:.95;
+
+    font-weight:600;
+
+    color:var(--color-primary);
+
+    margin-bottom:28px;
+
+}
+
+.hero-highlight{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:rgba(201,162,39,.10);
+
+    color:var(--color-gold);
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.hero-description{
+
+    max-width:470px;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    color:var(--color-text);
+
+    margin-bottom:40px;
+
+}
+
+/* =======================================================
+   FOTO
+======================================================= */
+
+.hero-image-container{
+
+    display:flex;
+
+    justify-content:center;
 
     position:relative;
 
 }
 
-/* Coluna de Texto */
-.hero-text-container {
-  flex: 1;
-  max-width: 520px;
+/* =======================================================
+   BRILHO
+======================================================= */
+
+.hero-image-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(201,162,39,.18),
+
+        transparent 70%
+
+    );
+
+    filter:blur(25px);
+
+    z-index:-1;
+
 }
 
-.hero-subtitle {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--color-subtitle);
-  margin-bottom: 0.5rem;
+/* =======================================================
+   ARCO
+======================================================= */
+
+.photo-arch{
+
+    width:430px;
+
+    height:570px;
+
+    background:var(--color-arch-bg);
+
+    border-radius:240px 240px 35px 35px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 25px 50px rgba(0,0,0,.08);
+
+    position:relative;
+
 }
 
-.hero-title {
-  font-family: var(--font-title);
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.05;
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
+/* =======================================================
+   FOTO
+======================================================= */
+
+.photo-arch img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
 }
 
-.hero-highlight {
-  font-family: var(--font-body);
-  color: var(--color-gold);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  line-height: 1.4;
+.photo-arch:hover img{
+
+    transform:scale(1.03);
+
 }
 
-.hero-description {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  color: var(--color-text);
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-  font-weight: 300;
+/* =======================================================
+   SELO
+======================================================= */
+
+.photo-arch::after{
+
+    content:"✨ 7 anos de experiência";
+
+    position:absolute;
+
+    right:-40px;
+
+    bottom:35px;
+
+    background:white;
+
+    color:var(--color-primary);
+
+    padding:14px 22px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    box-shadow:
+
+        0 12px 30px rgba(0,0,0,.08);
+
 }
 
-/* Botão Agendar WhatsApp */
-.btn-whatsapp {
-  display: inline-block;
-  background-color: var(--color-button);
-  color: var(--color-white);
-  padding: 1rem 2.2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(179, 103, 84, 0.25);
-  transition: all 0.3s ease;
+/* =======================================================
+   ANIMAÇÕES
+======================================================= */
+
+.hero-text-container{
+
+    animation:fadeLeft .9s ease;
+
 }
 
-.btn-whatsapp:hover {
-  background-color: var(--color-button-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(179, 103, 84, 0.35);
+.hero-image-container{
+
+    animation:fadeRight .9s ease;
+
 }
 
-/* Moldura em Arco para a Foto */
-.hero-image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
 }
 
-.photo-arch {
-  width: 100%;
-  max-width: 420px;
-  height: 520px;
-  background-color: var(--color-arch-bg);
-  border-radius: 210px 210px 30px 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
 }
 
-.photo-placeholder {
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 1.1rem;
+/* =======================================================
+   RESPONSIVO
+======================================================= */
+
+@media(max-width:980px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:60px;
+
+        padding:60px 0;
+
+    }
+
+    .hero-text-container{
+
+        margin:auto;
+
+    }
+
+    .hero-description{
+
+        margin:auto;
+
+        margin-bottom:40px;
+
+    }
+
+    .hero-title{
+
+        font-size:4rem;
+
+    }
+
+    .photo-arch{
+
+        width:340px;
+
+        height:460px;
+
+    }
+
+    .photo-arch::after{
+
+        right:50%;
+
+        transform:translateX(50%);
+
+        bottom:-20px;
+
+    }
+
 }
 
-.photo-arch img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+@media(max-width:600px){
 
-/* Ajuste para Celular */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1.5rem;
-  }
+    .hero-title{
 
-  .hero-title {
-    font-size: 3rem;
-  }
+        font-size:3.2rem;
 
-  .photo-arch {
-    height: 400px;
-  }
+    }
+
+    .photo-arch{
+
+        width:290px;
+
+        height:390px;
+
+    }
+
 }
