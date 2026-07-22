@@ -1,11 +1,129 @@
-header{
+/* ==========================================
+   HEADER
+========================================== */
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(183,110,93,.15);
 
 }
 
-nav{
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.header .container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
 
 }
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    text-decoration:none;
+
+    color:var(--dark);
+
+}
+
+.logo strong{
+
+    color:var(--terracotta);
+
+}
+
+/* ==========================================
+   MENU
+========================================== */
 
 .menu{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:var(--dark);
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+/* ==========================================
+   MENU HOVER
+========================================== */
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    color:var(--terracotta);
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
 
 }
