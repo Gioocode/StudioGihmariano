@@ -1,15 +1,28 @@
 :root {
-  /* Cores */
+
+  /* ==========================================
+     CORES
+  ========================================== */
+
+  --terracotta: #b36754;
+  --terracotta-dark: #9d5644;
+
   --color-primary: #1a1a1a;
   --color-subtitle: #4a4a4a;
   --color-gold: #cbb052;
   --color-text: #555555;
-  --color-button: #b36754;
-  --color-button-hover: #9d5644;
+
+  --color-button: var(--terracotta);
+  --color-button-hover: var(--terracotta-dark);
+
   --color-arch-bg: #f7f3ee;
   --color-white: #ffffff;
 
-  /* Fontes */
+  /* ==========================================
+     FONTES
+  ========================================== */
+
   --font-title: 'Cormorant Garamond', serif;
   --font-body: 'Poppins', sans-serif;
+
 }
