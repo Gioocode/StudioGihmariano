@@ -9,6 +9,7 @@ body {
   background-color: var(--color-white);
   color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
+  padding-top:80px;
 }
 
 
