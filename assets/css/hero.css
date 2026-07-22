@@ -1,13 +1,26 @@
 /* Container da seção principal */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  gap: 3rem;
-  min-height: 80vh;
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    min-height:calc(100vh - 80px);
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    position:relative;
+
 }
 
 /* Coluna de Texto */
